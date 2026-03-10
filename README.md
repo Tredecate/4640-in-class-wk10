@@ -1,4 +1,6 @@
 # 4640-ansible-roles-lab
+- Thomas
+- Charley
 
 ## Overview
 This repository contains a refactored Ansible configuration that provisions two AWS EC2 instances created via Terraform. The original configuration is modularized into two distinct roles:
