@@ -3,15 +3,20 @@ locals {
   project_name = "lab_week_11"
 }
 
-# get the most recent ami for Ubuntu 25.04 owned by amazon
+# get the most recent ami for Debian 13
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami
-data "aws_ami" "ubuntu" {
+data "aws_ami" "debian" {
   most_recent = true
   owners      = ["amazon"]
 
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd-gp3/*-25.04-amd64-server-*"]
+    values = ["debian-13-amd64-*"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
   }
 }
 
@@ -138,7 +143,7 @@ module "frontend" {
   project_name           = local.project_name # project name from local
   ec2_name               = "ubuntu"
   ec2_role               = "frontend-server"
-  ami                    = data.aws_ami.ubuntu.id      # data source AMI
+  ami                    = data.aws_ami.debian.id      # data source AMI
   key_name               = "aws-4640"                  # SSH key name
   vpc_security_group_ids = [aws_security_group.web.id] # Pass security group IDs here
   subnet_id              = aws_subnet.web.id           # Pass the subnet ID here
