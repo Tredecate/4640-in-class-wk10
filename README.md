@@ -18,4 +18,4 @@ This repository contains a refactored Ansible configuration that provisions two 
 
 ## Screenshot
 
-![From Thomas with love](.attachments/image.png)
+![server-img.png](server-img.png)
