@@ -10,7 +10,7 @@ This repository contains a refactored Ansible configuration that provisions two 
 
 **_NOTE_**: Need to install python3 botocore and boto3 to run the playbook successfully.
 
-- `ansible-lint`:The command checks the Ansible playbook for best practices and potential issues
+- `ansible-lint`: The command checks the Ansible playbook and roles for best practices and potential issues
 
 - `ansible-playbook playbook.yml`: The command executes the Ansible playbook, which applies the defined configurations to the target hosts.
 
