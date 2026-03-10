@@ -141,7 +141,7 @@ module "redis" {
 module "frontend" {
   source                 = "./modules/web-server/"
   project_name           = local.project_name # project name from local
-  ec2_name               = "ubuntu"
+  ec2_name               = "debian"
   ec2_role               = "frontend-server"
   ami                    = data.aws_ami.debian.id      # data source AMI
   key_name               = "aws-4640"                  # SSH key name
