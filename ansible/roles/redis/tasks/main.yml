@@ -1,3 +1,4 @@
+---
 - name: Install redis
   ansible.builtin.dnf:
     name: redis

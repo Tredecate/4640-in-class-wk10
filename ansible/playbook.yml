@@ -1,3 +1,4 @@
+---
 - name: Setup Redis Backend Server
   hosts: server_role_redis_server
   become: true
