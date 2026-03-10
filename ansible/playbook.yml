@@ -3,11 +3,11 @@
   become: true
   remote_user: rocky
   roles:
-    - redis_backend
+    - redis
 
 - name: Setup Nginx Frontend Server
   hosts: server_role_frontend_server
   become: true
   remote_user: admin
   roles:
-    - nginx_frontend
+    - frontend
